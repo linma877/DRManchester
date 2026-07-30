@@ -51,9 +51,14 @@ footer{padding:55px 4vw;display:flex;justify-content:space-between;align-items:f
 .hotspot.explore{left:5.4%;top:75.5%;width:21.7%;height:7.3%}
 .hotspot.scroll{left:5.4%;bottom:5.8%;width:17%;height:5%}
 .mobile-hero { display:none; }
+.framework-board{position:relative;border:1px solid rgba(107,33,79,.2);border-radius:14px;overflow:hidden;background:white;box-shadow:0 26px 70px rgba(42,11,46,.12)}
+.framework-board>img{display:block;width:100%;height:auto}
+.tem-updated-label{position:absolute;left:8.55%;top:41.2%;width:9.5%;height:5.2%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#26082f;font-size:clamp(7px,.82vw,14px);line-height:1.15;text-align:center}
+.tem-updated-label strong{font-weight:600}.tem-updated-label span{display:block;margin-top:2px}
 
 @media (max-width:700px){
   .reference-hero{display:none}
+  .framework-board{border-radius:7px;overflow-x:auto}.framework-board>img{width:900px;max-width:none}.tem-updated-label{left:77px;top:371px;width:86px;height:47px;font-size:8px}
   .mobile-hero{min-height:100svh;display:flex;flex-direction:column;padding:24px 22px 36px;color:white;background:linear-gradient(90deg,rgba(27,0,44,.97) 0%,rgba(35,0,55,.88) 56%,rgba(35,0,55,.65) 100%),url('/hero-reference.png') center/cover no-repeat;position:relative;overflow:hidden}
   .mobile-hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(196,91,255,.25);border-radius:50%;right:-120px;top:28%;box-shadow:0 0 70px rgba(151,42,213,.3)}
   .mobile-brand{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.18);position:relative;z-index:1}

@@ -1,12 +1,3 @@
-const scales = [
-  { range: "100 nm", title: "Nanopores", method: "TEM · FIB-SEM", note: "Interfaces & mineral texture" },
-  { range: "1–10 µm", title: "Micropores", method: "Nano-CT · SEM", note: "Connectivity & wettability" },
-  { range: "10–500 µm", title: "Porous media", method: "Micro-CT · Raman", note: "Multiphase displacement" },
-  { range: "mm–cm", title: "Fractures", method: "Operando CT", note: "Reactive flow & mechanics" },
-  { range: "cm–m", title: "Core", method: "HPHT experiments", note: "Upscaling & validation" },
-  { range: "m–km", title: "Formation", method: "Field data · Models", note: "Storage & prediction" },
-];
-
 const workflow = [
   ["01", "Image", "Observe structure across scales"],
   ["02", "Characterise", "Quantify chemistry and topology"],
@@ -54,17 +45,15 @@ export default function Home() {
 
       <section className="framework section" id="framework">
         <div className="section-heading">
-          <div><p className="section-index">01 / Platform framework</p><h2>One connected view,<br/>from nanopores to formations.</h2></div>
-          <p>We connect instruments, experiments and models across six orders of magnitude—turning observations into a coherent predictive system.</p>
+          <div><p className="section-index">01 / Platform framework</p><h2>From imaging matter<br/>to predictive matter.</h2></div>
+          <p>A single integrated framework connecting multiscale observation, dynamic experiments, physics, AI and digital twins—from nanopores to geological formations.</p>
         </div>
-        <div className="scale-line" aria-label="Platform scales">
-          {scales.map((scale, index) => <article className="scale-card" key={scale.title} tabIndex={0}>
-            <div className="scale-top"><span>{String(index + 1).padStart(2, "0")}</span><span>{scale.range}</span></div>
-            <div className={`scale-specimen specimen-${index + 1}`} aria-hidden="true"><i/><i/><i/></div>
-            <h3>{scale.title}</h3><p className="method">{scale.method}</p><p className="scale-note">{scale.note}</p>
-          </article>)}
+        <div className="framework-board">
+          <img src="/framework-reference.png" alt="Digital Rock and Porous Materials Platform framework spanning nanopores to formations, with integrated workflow and platform capabilities" />
+          <div className="tem-updated-label" aria-label="Updated TEM capability: 2D, 3D and 4D">
+            <strong>TEM Tomography</strong><span>(2D / 3D / 4D)</span>
+          </div>
         </div>
-        <div className="scale-axis"><span>Nano</span><i/><span>Sample</span><i/><span>System</span></div>
       </section>
 
       <section className="workflow-section" id="workflow">
