@@ -28,34 +28,29 @@ const capabilities = [
 export default function Home() {
   return (
     <main>
-      <nav className="nav" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="Digital Rock and Porous Materials Platform home">
-          <span className="brand-mark" aria-hidden="true">DR</span>
-          <span><strong>Digital Rock</strong><small>Porous Materials Platform</small></span>
-        </a>
-        <div className="nav-links">
-          <a href="#framework">Platform</a><a href="#capabilities">Capabilities</a><a href="#applications">Applications</a>
-        </div>
-        <a className="nav-cta" href="mailto:hello@digitalrockmanchester.com">Collaborate</a>
-      </nav>
+      <section className="reference-hero" id="top" aria-label="Digital Rock and Porous Materials Platform">
+        <img className="reference-image" src="/hero-reference.png" alt="Digital Rock and Porous Materials Platform — From Imaging Matter to Predictive Matter" />
+        <nav className="reference-hotspots" aria-label="Primary navigation">
+          <a className="hotspot home" href="#top">Home</a>
+          <a className="hotspot research" href="#framework">Research</a>
+          <a className="hotspot facilities" href="#capabilities">Facilities</a>
+          <a className="hotspot publications" href="#workflow">Publications</a>
+          <a className="hotspot people" href="#capabilities">People</a>
+          <a className="hotspot news" href="#applications">News</a>
+          <a className="hotspot join" href="mailto:hello@digitalrockmanchester.com">Join Us</a>
+          <a className="hotspot explore" href="#framework">Explore Platform</a>
+          <a className="hotspot scroll" href="#framework">Scroll to discover</a>
+        </nav>
+      </section>
 
-      <header className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">The University of Manchester</p>
-          <h1>Digital Rock <span>&amp; Porous Materials</span> Platform</h1>
-          <p className="hero-tagline">From imaging matter to <em>predictive matter.</em></p>
-          <p className="hero-intro">Integrating multiscale imaging, dynamic experiments and artificial intelligence to accelerate discovery across energy, environment and advanced materials.</p>
-          <div className="hero-actions"><a className="primary-button" href="#framework">Explore the platform <span>↓</span></a><a className="text-link" href="#workflow">See how it works →</a></div>
-        </div>
-        <div className="hero-visual" aria-label="Abstract multiscale porous material visualisation">
-          <div className="orb orb-one"/><div className="orb orb-two"/><div className="orb orb-three"/>
-          <div className="scan-ring ring-one"/><div className="scan-ring ring-two"/><div className="scan-ring ring-three"/>
-          <div className="visual-label label-a"><span>100 nm</span>Interface</div>
-          <div className="visual-label label-b"><span>4D</span>Dynamics</div>
-          <div className="visual-label label-c"><span>AI</span>Prediction</div>
-          <p className="visual-caption">Matter, resolved across scale and time</p>
-        </div>
-      </header>
+      <section className="mobile-hero" aria-label="Digital Rock and Porous Materials Platform mobile introduction">
+        <div className="mobile-brand"><span>THE UNIVERSITY OF MANCHESTER</span><strong>DIGITAL ROCK &amp;<br/>POROUS MATERIALS PLATFORM</strong></div>
+        <p className="mobile-eyebrow">The University of Manchester</p>
+        <h1>Digital Rock &amp;<br/>Porous Materials<br/>Platform</h1>
+        <p className="mobile-tagline">From Imaging Matter to Predictive Matter</p>
+        <div className="mobile-keywords"><span>Multiscale Characterisation</span><span>4D Dynamics</span><span>Modelling &amp; AI</span><span>Digital Twin</span></div>
+        <a className="mobile-cta" href="#framework">Explore Platform <span>→</span></a>
+      </section>
 
       <section className="framework section" id="framework">
         <div className="section-heading">

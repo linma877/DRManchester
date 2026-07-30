@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digital Rock & Porous Materials Platform",
     description: "From Imaging Matter to Predictive Matter",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Digital Rock & Porous Materials Platform" }],
+    images: [{ url: "/og.png", width: 1536, height: 1024, alt: "Digital Rock & Porous Materials Platform" }],
   },
   twitter: {
     card: "summary_large_image",
