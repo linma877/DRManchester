@@ -49,7 +49,7 @@ export default function Home() {
         <nav className="reference-hotspots" aria-label="Primary navigation">
           <a className="hotspot home" href="#top">Home</a>
           <a className="hotspot research" href="#framework">Research</a>
-          <a className="hotspot facilities" href="#capabilities">Facilities</a>
+          <a className="hotspot facilities" href="#facilities">Facilities</a>
           <a className="hotspot publications" href="#workflow">Publications</a>
           <a className="hotspot people" href="#people">People</a>
           <a className="hotspot news" href="#applications">News</a>
@@ -81,28 +81,45 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="facilities-section section" id="facilities">
+        <div className="section-heading">
+          <div><p className="section-index">02 / Facilities</p><h2>Observe porous matter across scale, modality and time.</h2></div>
+          <p>Our partnerships connect laboratory, synchrotron and multiscale characterisation facilities for static, time-resolved and operando observation.</p>
+        </div>
+        <figure className="facilities-figure">
+          <img src="/facilities-observational-space.png" alt="The observational space of porous matter, mapping multiscale, multimodal and operando imaging and characterisation facilities" />
+        </figure>
+        <div className="partnerships-heading"><p className="section-index">Partnerships</p><span>Explore connected facilities ↘</span></div>
+        <div className="partnership-grid">
+          <a href="https://nxct.ac.uk/" target="_blank" rel="noreferrer"><small>Laboratory imaging</small><strong>Lab CT</strong><span>National X-ray Computed Tomography →</span></a>
+          <a href="https://www.diamond.ac.uk/Instruments/Imaging-and-Microscopy.html" target="_blank" rel="noreferrer"><small>National facility</small><strong>Synchrotron CT</strong><span>Diamond Light Source →</span></a>
+          <a href="https://www.harwell.manchester.ac.uk/equipment/" target="_blank" rel="noreferrer"><small>Research infrastructure</small><strong>UoM at Harwell</strong><span>Explore equipment →</span></a>
+          <a href="https://www.royce.ac.uk/equipment-and-facilities/" target="_blank" rel="noreferrer"><small>Advanced materials</small><strong>Multiscale Characterisation</strong><span>Henry Royce Institute →</span></a>
+        </div>
+      </section>
+
       <section className="workflow-section" id="workflow">
-        <div className="workflow-intro"><p className="section-index light">02 / Data-to-decision workflow</p><h2>A continuous path from observation to prediction.</h2><p>Every stage preserves context, uncertainty and provenance—so insight can move confidently from the scanner to real-world decisions.</p></div>
+        <div className="workflow-intro"><p className="section-index light">03 / Data-to-decision workflow</p><h2>A continuous path from observation to prediction.</h2><p>Every stage preserves context, uncertainty and provenance—so insight can move confidently from the scanner to real-world decisions.</p></div>
         <ol className="workflow-list">
           {workflow.map(([number, title, description]) => <li key={number}><span className="step-number">{number}</span><div><h3>{title}</h3><p>{description}</p></div><span className="step-arrow">→</span></li>)}
         </ol>
       </section>
 
       <section className="capabilities section" id="capabilities">
-        <div className="section-heading compact"><div><p className="section-index">03 / Integrated capabilities</p><h2>Built as a platform,<br/>not a collection of tools.</h2></div><p>Six connected capabilities support research from fundamental science through industrial translation.</p></div>
+        <div className="section-heading compact"><div><p className="section-index">04 / Integrated capabilities</p><h2>Built as a platform,<br/>not a collection of tools.</h2></div><p>Six connected capabilities support research from fundamental science through industrial translation.</p></div>
         <div className="capability-grid">
           {capabilities.map(([code, title, description, colour]) => <article className={`capability-card ${colour}`} key={code}><span className="capability-code">{code}</span><div><h3>{title}</h3><p>{description}</p></div><span className="card-arrow">↗</span></article>)}
         </div>
       </section>
 
       <section className="applications" id="applications">
-        <div><p className="section-index light">04 / Applications</p><h2>Predictive porous materials for a changing world.</h2></div>
+        <div><p className="section-index light">05 / Applications</p><h2>Predictive porous materials for a changing world.</h2></div>
         <div className="application-list"><span>Oil and Gas</span><span>Shales and Mudstones</span><span>Nuclear Waste Disposal</span><span>Geothermal</span><span>Geological CO₂ Storage</span><span>Underground Hydrogen Storage</span><span>Natural Hydrogen</span><span>Environmental Remediation</span><span>Catalysis</span><span>Batteries</span></div>
       </section>
 
       <section className="people-section section" id="people">
         <div className="section-heading people-heading">
-          <div><p className="section-index">05 / People</p><h2>People shaping predictive porous materials.</h2></div>
+          <div><p className="section-index">06 / People</p><h2>People shaping predictive porous materials.</h2></div>
           <p>Our team connects multiscale imaging, experimentation and modelling across geoscience, energy and advanced materials.</p>
         </div>
         <div className="pi-grid">
