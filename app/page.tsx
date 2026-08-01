@@ -72,7 +72,7 @@ export default function Home() {
 
       <section className="applications" id="applications">
         <div><p className="section-index light">04 / Applications</p><h2>Predictive porous materials for a changing world.</h2></div>
-        <div className="application-list"><span>Natural hydrogen</span><span>CO₂ storage</span><span>Subsurface energy</span><span>Catalysis</span><span>Batteries</span><span>Environmental systems</span></div>
+        <div className="application-list"><span>Oil and Gas</span><span>Shales and Mudstones</span><span>Nuclear Waste Disposal</span><span>Geothermal</span><span>Geological CO₂ Storage</span><span>Underground Hydrogen Storage</span><span>Natural Hydrogen</span><span>Environmental Remediation</span><span>Catalysis</span><span>Batteries</span></div>
       </section>
 
       <footer><div className="footer-brand"><span className="brand-mark">DR</span><div><strong>Digital Rock &amp; Porous Materials Platform</strong><p>From Imaging Matter to Predictive Matter</p></div></div><div><p>The University of Manchester</p><a href="mailto:hello@digitalrockmanchester.com">Start a conversation →</a></div></footer>
