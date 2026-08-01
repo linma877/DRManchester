@@ -88,7 +88,7 @@ export default function Home() {
         </div>
         <div className="facilities-concept">
           <div className="concept-axis concept-scale"><small>01 / Scale</small><strong>Nano</strong><i>→</i><strong>Micro</strong><i>→</i><strong>Core</strong></div>
-          <div className="concept-techniques-image"><small>02 / Core techniques</small><img src="/facilities-core-techniques.png" alt="Core porous-material observation techniques across spatial and temporal scales" /></div>
+          <div className="concept-techniques-list"><small>02 / Core techniques</small><div><span>Lab Macro / Micro / Nano-CT</span><span>Synchrotron Micro / Nano-CT</span><span>SEM / FIB / TEM Tomography</span><span>AFM &amp; Nano-IR</span><span>High-Temperature, High-Pressure Gas Sorption</span><span>High-Temperature, High-Pressure Batch Reactors</span><span>Spectroscopic &amp; Chemical Imaging</span><span>Operando Flow &amp; Reaction Cells</span></div></div>
           <div className="concept-axis concept-time"><small>03 / 4D observation</small><strong>Static</strong><i>→</i><strong>Time-lapse</strong><i>→</i><strong>Operando</strong></div>
           <p>Multiscale <b>×</b> multimodal <b>×</b> time-resolved</p>
         </div>
