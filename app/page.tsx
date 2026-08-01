@@ -86,9 +86,12 @@ export default function Home() {
           <div><p className="section-index">02 / Facilities</p><h2>Observe porous matter across scale, modality and time.</h2></div>
           <p>Our partnerships connect laboratory, synchrotron and multiscale characterisation facilities for static, time-resolved and operando observation.</p>
         </div>
-        <figure className="facilities-figure">
-          <img src="/facilities-observational-space.png" alt="The observational space of porous matter, mapping multiscale, multimodal and operando imaging and characterisation facilities" />
-        </figure>
+        <a className="facilities-concept" href="/facilities" aria-label="Open the complete high-resolution facilities diagram">
+          <div className="concept-axis concept-scale"><small>01 / Scale</small><strong>Nano</strong><i>→</i><strong>Micro</strong><i>→</i><strong>Core</strong></div>
+          <div className="concept-techniques"><small>02 / Core techniques</small><div><span>TEM / FIB-SEM</span><span>Nano &amp; Lab CT</span><span>Synchrotron CT</span><span>Multimodal sensing</span></div></div>
+          <div className="concept-axis concept-time"><small>03 / 4D observation</small><strong>Static</strong><i>→</i><strong>Time-lapse</strong><i>→</i><strong>Operando</strong></div>
+          <p>Multiscale <b>×</b> multimodal <b>×</b> time-resolved <em>View complete high-resolution map ↗</em></p>
+        </a>
         <div className="partnerships-heading"><p className="section-index">Partnerships</p><span>Explore connected facilities ↘</span></div>
         <div className="partnership-grid">
           <a href="https://nxct.ac.uk/" target="_blank" rel="noreferrer"><small>Laboratory imaging</small><strong>Lab CT</strong><span>National X-ray Computed Tomography →</span></a>
