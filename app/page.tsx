@@ -16,6 +16,31 @@ const capabilities = [
   ["IC", "Impact & Collaboration", "Industry, facilities, training and open science", "orange"],
 ];
 
+const postdocs = [
+  ["Dr. Jingyue Hao", "current"], ["Dr. Heather Braid", "current"],
+  ["Dr. Zhongbei Li", "current"], ["Dr. Ke Wang", "former"],
+  ["Dr. Jing Zhang", "former"], ["Dr. Takshak Shende", "former"],
+];
+
+const primaryPhds = [
+  ["Chenzi Shi", "graduated"], ["Heather Braid", "graduated"],
+  ["Ziyu Zhang", "graduated"], ["Xin Zhong", "2022–"],
+  ["Camilo Salazar", "2022–"], ["Ali Bony Kaya", "2023–"],
+  ["Sonu Sudhikumar Seena", "2023–"], ["Bengang Chen", "2023–"],
+  ["Jeffrey Akuoko", "2023–"], ["Chunmiao Ma", "2024–"],
+  ["Yifan Yin", "2025–"], ["Deni Suryo Pratama", "2026–"],
+];
+
+const coSupervisedPhds = [
+  ["Ke Wang", "graduated"], ["Georgy Borisochev", "graduated"],
+  ["David Johnson", "graduated"], ["Shuangyi Gong", "graduated"],
+  ["Aristarchos Mavridis", "graduated"], ["Peter Castellucci", "graduated"],
+  ["Muhammad Faisal Abbasi", ""], ["Daniel Ronald", ""],
+  ["Josh Marsh", ""], ["Abdelrazik Elfar", ""], ["Yue He", ""],
+  ["Wei Hao", ""], ["Razlin Abd Rashid", ""], ["Holly Mills", ""],
+  ["Xinyi Li", ""],
+];
+
 export default function Home() {
   return (
     <main>
@@ -26,7 +51,7 @@ export default function Home() {
           <a className="hotspot research" href="#framework">Research</a>
           <a className="hotspot facilities" href="#capabilities">Facilities</a>
           <a className="hotspot publications" href="#workflow">Publications</a>
-          <a className="hotspot people" href="#capabilities">People</a>
+          <a className="hotspot people" href="#people">People</a>
           <a className="hotspot news" href="#applications">News</a>
           <a className="hotspot join" href="mailto:hello@digitalrockmanchester.com">Join Us</a>
           <a className="hotspot explore" href="#framework">Explore Platform</a>
@@ -73,6 +98,22 @@ export default function Home() {
       <section className="applications" id="applications">
         <div><p className="section-index light">04 / Applications</p><h2>Predictive porous materials for a changing world.</h2></div>
         <div className="application-list"><span>Oil and Gas</span><span>Shales and Mudstones</span><span>Nuclear Waste Disposal</span><span>Geothermal</span><span>Geological CO₂ Storage</span><span>Underground Hydrogen Storage</span><span>Natural Hydrogen</span><span>Environmental Remediation</span><span>Catalysis</span><span>Batteries</span></div>
+      </section>
+
+      <section className="people-section section" id="people">
+        <div className="section-heading people-heading">
+          <div><p className="section-index">05 / People</p><h2>People shaping predictive porous materials.</h2></div>
+          <p>Our team connects multiscale imaging, experimentation and modelling across geoscience, energy and advanced materials.</p>
+        </div>
+        <div className="pi-grid">
+          <a className="pi-card" href="https://research.manchester.ac.uk/en/persons/lin.ma/" target="_blank" rel="noreferrer"><span>Principal Investigator</span><h3>Lin Ma</h3><b>Manchester profile ↗</b></a>
+          <a className="pi-card" href="https://research.manchester.ac.uk/en/persons/kevin.taylor/" target="_blank" rel="noreferrer"><span>Principal Investigator</span><h3>Kevin Taylor</h3><b>Manchester profile ↗</b></a>
+        </div>
+        <div className="team-groups">
+          <article className="team-group"><p className="team-kicker">Team members</p><h3>PDRAs</h3><ul>{postdocs.map(([name, status]) => <li key={name}><span>{name}</span><small>{status}</small></li>)}</ul></article>
+          <article className="team-group"><p className="team-kicker">PhD students</p><h3>Primary supervisor</h3><ul>{primaryPhds.map(([name, status]) => <li key={name}><span>{name}</span><small>{status}</small></li>)}</ul></article>
+          <article className="team-group"><p className="team-kicker">PhD students</p><h3>Co-supervisor</h3><ul>{coSupervisedPhds.map(([name, status]) => <li key={name}><span>{name}</span>{status && <small>{status}</small>}</li>)}</ul></article>
+        </div>
       </section>
 
       <footer><div className="footer-brand"><span className="brand-mark">DR</span><div><strong>Digital Rock &amp; Porous Materials Platform</strong><p>From Imaging Matter to Predictive Matter</p></div></div><div><p>The University of Manchester</p><a href="mailto:hello@digitalrockmanchester.com">Start a conversation →</a></div></footer>
