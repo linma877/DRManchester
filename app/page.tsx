@@ -126,8 +126,8 @@ export default function Home() {
           <p>Our team connects multiscale imaging, experimentation and modelling across geoscience, energy and advanced materials.</p>
         </div>
         <div className="pi-grid">
-          <a className="pi-card" href="https://research.manchester.ac.uk/en/persons/lin.ma/" target="_blank" rel="noreferrer"><span>Principal Investigator</span><h3>Lin Ma</h3><b>Manchester profile ↗</b></a>
-          <a className="pi-card" href="https://research.manchester.ac.uk/en/persons/kevin.taylor/" target="_blank" rel="noreferrer"><span>Principal Investigator</span><h3>Kevin Taylor</h3><b>Manchester profile ↗</b></a>
+          <article className="pi-card"><span>Principal Investigator</span><h3>Lin Ma</h3><div className="pi-links"><a href="https://research.manchester.ac.uk/en/persons/lin.ma/" target="_blank" rel="noreferrer">Manchester profile ↗</a><a href="https://www.linkedin.com/in/lin-ma-392b1766/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></article>
+          <article className="pi-card"><span>Principal Investigator</span><h3>Kevin Taylor</h3><div className="pi-links"><a href="https://research.manchester.ac.uk/en/persons/kevin.taylor/" target="_blank" rel="noreferrer">Manchester profile ↗</a></div></article>
         </div>
         <div className="team-groups">
           <article className="team-group"><p className="team-kicker">Team members</p><h3>PDRAs</h3><ul>{postdocs.map(([name, status]) => <li key={name}><span>{name}</span><small>{status}</small></li>)}</ul></article>
