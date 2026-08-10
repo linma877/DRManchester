@@ -63,6 +63,10 @@ export default function Home() {
           <div><p className="section-index">02 / Facilities</p><h2>Observe porous matter across scale, modality and time.</h2></div>
           <p>Our partnerships connect laboratory, synchrotron and multiscale characterisation facilities for static, time-resolved and operando observation.</p>
         </div>
+        <a className="facilities-figure" href="/facilities" aria-label="Explore the complete facilities map">
+          <img src="/facilities-observational-space.png" alt="The observational space of porous matter across spatial scale, information modality and temporal resolution" />
+          <span><b>Complete observational space</b><em>View the full-resolution Facilities map →</em></span>
+        </a>
         <div className="facilities-concept">
           <div className="concept-axis concept-scale"><small>01 / Scale</small><strong>Nano</strong><i>→</i><strong>Micro</strong><i>→</i><strong>Core</strong></div>
           <div className="concept-techniques-list"><small>02 / Core techniques</small><div><span>Lab Macro / Micro / Nano-CT</span><span>Synchrotron Micro / Nano-CT</span><span>SEM / FIB / TEM Tomography</span><span>AFM &amp; Nano-IR</span><span>High-Temperature, High-Pressure Gas Sorption</span><span>High-Temperature, High-Pressure Batch Reactors</span><span>Spectroscopic &amp; Chemical Imaging</span><span>Operando Flow &amp; Reaction Cells</span></div></div>
