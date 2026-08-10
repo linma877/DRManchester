@@ -7,30 +7,16 @@ const capabilities = [
   ["IC", "Impact & Collaboration", "Industry, facilities, training and open science", "orange"],
 ];
 
-const postdocs = [
-  ["Dr. Jingyue Hao", "current"], ["Dr. Heather Braid", "current"],
-  ["Dr. Zhongbei Li", "current"], ["Dr. Ke Wang", "former"],
-  ["Dr. Jing Zhang", "former"], ["Dr. Takshak Shende", "former"],
+const researchHighlights = [
+  { image: "/research-multiscale.jpg", label: "Multiscale imaging", title: "Connecting pores across scales", description: "Correlative imaging and upscaling connect sub-nanometre structures with centimetre-scale rock architecture.", detail: "Sub-nm → cm" },
+  { image: "/research-thermal.jpg", label: "4D thermal response", title: "Watching pore networks evolve under heat", description: "Nano-CT reveals progressive pore and fracture development from ambient conditions to 400°C.", detail: "0–400°C" },
+  { image: "/research-particles.jpg", label: "Dynamic transport", title: "How particles block and reopen pores", description: "Time-resolved imaging captures attachment, bridging, pore filling, compaction and remobilisation.", detail: "3D + time" },
+  { image: "/research-fractures.jpg", label: "Mechanical behaviour", title: "Where fractures begin—and why", description: "Digital volume correlation links local strain, mineral composition and rock fabric to fracture propagation.", detail: "Imaging + DVC" },
+  { image: "/research-reactions.jpg", label: "Reactive transport", title: "When mineral reactions reshape flow", description: "4D imaging tracks dissolution and precipitation as they progressively alter fractures and nanoporous pathways.", detail: "Reaction + flow" },
 ];
 
-const primaryPhds = [
-  ["Chenzi Shi", "graduated"], ["Heather Braid", "graduated"],
-  ["Ziyu Zhang", "graduated"], ["Xin Zhong", "2022–"],
-  ["Camilo Salazar", "2022–"], ["Ali Bony Kaya", "2023–"],
-  ["Sonu Sudhikumar Seena", "2023–"], ["Bengang Chen", "2023–"],
-  ["Jeffrey Akuoko", "2023–"], ["Chunmiao Ma", "2024–"],
-  ["Yifan Yin", "2025–"], ["Deni Suryo Pratama", "2026–"],
-];
-
-const coSupervisedPhds = [
-  ["Ke Wang", "graduated"], ["Georgy Borisochev", "graduated"],
-  ["David Johnson", "graduated"], ["Shuangyi Gong", "graduated"],
-  ["Aristarchos Mavridis", "graduated"], ["Peter Castellucci", "graduated"],
-  ["Muhammad Faisal Abbasi", ""], ["Daniel Ronald", ""],
-  ["Josh Marsh", ""], ["Abdelrazik Elfar", ""], ["Yue He", ""],
-  ["Wei Hao", ""], ["Razlin Abd Rashid", ""], ["Holly Mills", ""],
-  ["Xinyi Li", ""],
-];
+const currentPostdocs = ["Dr. Jingyue Hao", "Dr. Heather Braid", "Dr. Zhongbei Li"];
+const currentPhds = ["Xin Zhong", "Camilo Salazar", "Ali Bony Kaya", "Sonu Sudhikumar Seena", "Bengang Chen", "Jeffrey Akuoko", "Chunmiao Ma", "Yifan Yin", "Deni Suryo Pratama"];
 
 export default function Home() {
   return (
@@ -41,10 +27,10 @@ export default function Home() {
           <a className="hotspot home" href="#top">Home</a>
           <a className="hotspot research" href="#framework">Research</a>
           <a className="hotspot facilities" href="#facilities">Facilities</a>
-          <a className="hotspot publications" href="https://research.manchester.ac.uk/en/persons/lin.ma/publications/" target="_blank" rel="noreferrer">Publications</a>
+          <a className="hotspot publications" href="#research-highlights">Publications</a>
           <a className="hotspot people" href="#people">People</a>
-          <a className="hotspot news" href="#applications">News</a>
-          <a className="hotspot join" href="mailto:hello@digitalrockmanchester.com">Join Us</a>
+          <a className="hotspot news" href="#opportunities">News</a>
+          <a className="hotspot join" href="#opportunities">Join Us</a>
           <a className="hotspot explore" href="#framework">Explore Platform</a>
           <a className="hotspot scroll" href="#framework">Scroll to discover</a>
         </nav>
@@ -99,25 +85,60 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="evidence-strip" aria-label="Research track record">
+        <div><strong>£15M+</strong><span>research funding secured</span></div>
+        <div><strong>£3.5M+</strong><span>as Principal Investigator</span></div>
+        <div><strong>30+</strong><span>PI-led synchrotron experiments</span></div>
+        <div><strong>120+</strong><span>PI-led beamtime days</span></div>
+      </section>
+
+      <section className="research-highlights section" id="research-highlights">
+        <div className="section-heading compact">
+          <div><p className="section-index">04 / Featured research</p><h2>Evidence across scale,<br/>time and process.</h2></div>
+          <p>Selected examples show how imaging becomes mechanistic understanding—and ultimately prediction.</p>
+        </div>
+        <div className="research-grid">
+          {researchHighlights.map((item, index) => (
+            <article className={`research-card research-card-${index + 1}`} key={item.title}>
+              <div className="research-image"><img src={item.image} alt={`${item.title} research example`} /></div>
+              <div className="research-copy"><div><small>{item.label}</small><span>{item.detail}</span></div><h3>{item.title}</h3><p>{item.description}</p></div>
+            </article>
+          ))}
+        </div>
+        <a className="publication-link" href="https://research.manchester.ac.uk/en/persons/lin.ma/publications/" target="_blank" rel="noreferrer">Explore all publications ↗</a>
+      </section>
+
       <section className="applications" id="applications">
-        <div><p className="section-index light">04 / Applications</p><h2>Predictive porous materials for a changing world.</h2></div>
+        <div><p className="section-index light">05 / Applications</p><h2>Predictive porous materials for a changing world.</h2></div>
         <div className="application-list"><span>Oil and Gas</span><span>Shales and Mudstones</span><span>Nuclear Waste Disposal</span><span>Geothermal</span><span>Geological CO₂ Storage</span><span>Underground Hydrogen Storage</span><span>Natural Hydrogen</span><span>Environmental Remediation</span><span>Catalysis</span><span>Batteries</span></div>
       </section>
 
       <section className="people-section section" id="people">
         <div className="section-heading people-heading">
-          <div><p className="section-index">05 / People</p><h2>People shaping predictive porous materials.</h2></div>
+          <div><p className="section-index">06 / People</p><h2>People shaping predictive porous materials.</h2></div>
           <p>Our team connects multiscale imaging, experimentation and modelling across geoscience, energy and advanced materials.</p>
         </div>
         <div className="pi-grid">
           <article className="pi-card"><span>Principal Investigator</span><h3>Lin Ma</h3><div className="pi-links"><a href="https://research.manchester.ac.uk/en/persons/lin.ma/" target="_blank" rel="noreferrer">Manchester profile ↗</a><a href="https://www.linkedin.com/in/lin-ma-392b1766/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></article>
           <article className="pi-card"><span>Principal Investigator</span><h3>Kevin Taylor</h3><div className="pi-links"><a href="https://research.manchester.ac.uk/en/persons/kevin.taylor/" target="_blank" rel="noreferrer">Manchester profile ↗</a></div></article>
         </div>
-        <div className="team-groups">
-          <article className="team-group"><p className="team-kicker">Team members</p><h3>PDRAs</h3><ul>{postdocs.map(([name, status]) => <li key={name}><span>{name}</span><small>{status}</small></li>)}</ul></article>
-          <article className="team-group"><p className="team-kicker">PhD students</p><h3>Primary supervisor</h3><ul>{primaryPhds.map(([name, status]) => <li key={name}><span>{name}</span><small>{status}</small></li>)}</ul></article>
-          <article className="team-group"><p className="team-kicker">PhD students</p><h3>Co-supervisor</h3><ul>{coSupervisedPhds.map(([name, status]) => <li key={name}><span>{name}</span>{status && <small>{status}</small>}</li>)}</ul></article>
+        <div className="current-team">
+          <article><p className="team-kicker">Current PDRAs</p><h3>3 researchers</h3><p>{currentPostdocs.join(" · ")}</p></article>
+          <article><p className="team-kicker">Current PhD researchers</p><h3>9 researchers</h3><p>{currentPhds.join(" · ")}</p></article>
+          <article className="team-summary"><p className="team-kicker">Team network</p><h3>Current team &amp; alumni</h3><p>Researchers trained across multiscale imaging, subsurface processes and predictive modelling.</p><a href="/people">Meet the full team →</a></article>
         </div>
+      </section>
+
+      <section className="projects-section section" id="projects">
+        <div className="section-heading compact"><div><p className="section-index">07 / Projects &amp; networks</p><h2>Connected to national research infrastructure.</h2></div><p>Selected programmes link facilities, fundamental science and translation across energy and environmental challenges.</p></div>
+        <div className="project-list">
+          <span>National Research Facility in Lab X-ray CT — NXCT II</span><span>GEOSAFE — Geological Disposal of Radioactive Waste</span><span>The University of Manchester at Harwell</span><span>Hydrogen Research Corridor</span><span>Enabling Hydrogen Storage Near Industrial Clusters</span>
+        </div>
+      </section>
+
+      <section className="opportunities" id="opportunities">
+        <div><p className="section-index light">08 / Opportunities</p><h2>PhD opportunities<br/>for 2027 entry.</h2></div>
+        <div><p>We welcome enquiries from prospective PhD researchers and collaborators interested in digital rock, multiscale imaging, subsurface energy storage and image-based modelling.</p><div className="opportunity-links"><a href="https://research.manchester.ac.uk/en/persons/lin.ma/" target="_blank" rel="noreferrer">Explore opportunities ↗</a><a href="mailto:lin.ma@manchester.ac.uk">Discuss a collaboration →</a></div></div>
       </section>
 
       <footer><div className="footer-brand"><span className="brand-mark">DR</span><div><strong>Digital Rock &amp; Porous Materials Platform</strong><p>From Imaging Matter to Predictive Matter</p></div></div><div><p>The University of Manchester</p><a href="mailto:hello@digitalrockmanchester.com">Start a conversation →</a></div></footer>
